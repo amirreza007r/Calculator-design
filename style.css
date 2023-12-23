@@ -1,0 +1,167 @@
+:root {
+    --main: hsl(222, 26%, 31%);
+    --main-background: hsl(223, 31%, 20%);
+    --key-background2: hsl(6, 63%, 50%);
+    --screen-background: hsl(224, 36%, 15%);
+    --key-background: hsl(30, 25%, 89%);
+    --keypad-background: hsl(223, 31%, 20%);
+}
+html {
+    height: 100%;
+}
+body {
+    background-color: var(--main);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+}
+.main-container {
+    max-width: 420px;
+    margin: auto;
+}
+.selector-box {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: var(--main-background);
+    position: relative;
+}
+.theme-section {
+    position: relative;
+}
+.theme-text {
+    position: absolute;
+    top: 3px;
+    right: 112px;
+}
+.theme-numbers {
+    position: absolute;
+    top: -27px;
+    right: 14px;
+    letter-spacing: 0.4rem;
+}
+.toggle-circle {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: var(--key-background2);
+}
+.result-container {
+    max-width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    background-color: var(--screen-background);
+    color: white;
+    margin-top: 0.8rem;
+}
+#result {
+    font-size: 3rem;
+}
+.square-shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    max-width: 65px;
+    height: 50px;
+    margin: 0.327rem;
+    border-radius: 7px;
+    box-shadow: 1px 4px 0px 1px rgba(64, 78, 114, 0.75);
+    background-color: var(--key-background);
+    user-select: none;
+}
+.del {
+    background-color: hsl(225, 21%, 49%) !important;
+    color: white !important;
+}
+.del:hover {
+    background-color: hsl(225, 9%, 57%) !important;
+}
+.square-shape:hover {
+    cursor: pointer;
+    background-color: hsl(0, 3%, 92%);
+}
+.square-shape:active {
+    color: pink;
+    transform: translateY(2px);
+}
+.square-shape span {
+    font-size: 2rem;
+}
+.input-reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    max-width: 130px;
+    height: 50px;
+    margin: 1rem;
+    border-radius: 7px;
+    box-shadow: 1px 4px 0px 1px rgba(64, 78, 114, 0.75);
+    background-color: hsl(225, 21%, 49%);
+    color: white;
+    user-select: none;
+}
+.input-reset:hover {
+    background-color: hsl(225, 9%, 57%);
+    cursor: pointer;
+}
+.input-reset:active {
+    color: pink;
+    transform: translateY(2px);
+}
+.input-equal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    max-width: 130px;
+    height: 50px;
+    margin: 1rem;
+    border-radius: 7px;
+    box-shadow: 1px 4px 0px 1px rgba(64, 78, 114, 0.75);
+    background-color: hsl(6, 63%, 50%);
+    color: white;
+    user-select: none;
+}
+.input-equal:hover {
+    cursor: pointer;
+    background-color: hsl(6, 53%, 57%);
+}
+.input-equal:active {
+    color: pink;
+    transform: translateY(2px);
+}
+
+.input-section {
+    padding: 0px 30px;
+    background-color: var(--keypad-background);
+}
+
+@media only screen and (max-width: 400px) {
+    .input-equal {
+        margin: 0.6rem;
+    }
+    .input-reset {
+        margin: 0.6rem;
+    }
+}
+
+.main-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.s-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
