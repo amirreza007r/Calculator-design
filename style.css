@@ -150,11 +150,28 @@ body {
     background-color: var(--keypad-background);
 }
 
+@media only screen and (max-width: 430px) {
+    .square-shape,
+    .input-equal,
+    .input-reset {
+        height: 60px;
+    }
+
+    .main-item {
+        grid-gap: 3px !important;
+    }
+    .s-items {
+        grid-gap: 3px !important;
+    }
+}
+
 .main-item {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
 }
 .s-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
 }
